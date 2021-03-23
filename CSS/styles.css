@@ -1,0 +1,1999 @@
+@font-face {
+  font-family: "Xirod";
+  src: url("font/xirod.ttf");
+}
+@font-face {
+  font-family: "Pusab";
+  src: url("font/PUSAB___.TTF");
+}
+@font-face {
+  font-family: "trs";
+  src: url("font/TRS-Million.otf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  background-color: #000;
+  overflow: hidden;
+  height: 100%;
+}
+html body #global {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body #global #fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  animation: gridCuadros 1500ms;
+  /* Cuadros con O */
+}
+@keyframes gridCuadros {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  75% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+html body #global #fondo .cuadros {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  animation: explosionCuadros 1500ms;
+  align-items: center;
+  justify-content: center;
+}
+html body #global #fondo .cuadros .circulosX {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+html body #global #fondo .cuadros .circulosX, html body #global #fondo .cuadros .circulosO {
+  border-radius: 100%;
+}
+html body #global #fondo .cuadros .contenedorCirculos {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+}
+html body #global #fondo .cuadros .contenedorCirculos .ejeRotacionO {
+  width: 100px;
+  height: 1px;
+  animation: reducirEje 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes reducirEje {
+  0% {
+    width: 100px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+html body #global #fondo .cuadros .contenedorCirculos .circulosO {
+  width: 15px;
+  height: 15px;
+}
+html body #global #fondo #cuadro1 {
+  align-self: end;
+}
+html body #global #fondo #cuadro2 {
+  align-self: end;
+}
+html body #global #fondo #cuadro3 {
+  align-self: end;
+}
+html body #global #fondo #cuadro4 {
+  align-self: center;
+}
+html body #global #fondo #cuadro5 {
+  align-self: center;
+}
+html body #global #fondo #cuadro6 {
+  align-self: center;
+}
+html body #global #fondo #cuadro7 {
+  align-self: start;
+}
+html body #global #fondo #cuadro8 {
+  align-self: start;
+}
+html body #global #fondo #cuadro9 {
+  align-self: start;
+}
+html body #global #fondo #cuadro1 {
+  justify-self: end;
+}
+html body #global #fondo #cuadro4 {
+  justify-self: end;
+}
+html body #global #fondo #cuadro7 {
+  justify-self: end;
+}
+html body #global #fondo #cuadro2 {
+  justify-self: center;
+}
+html body #global #fondo #cuadro5 {
+  justify-self: center;
+}
+html body #global #fondo #cuadro8 {
+  justify-self: center;
+}
+html body #global #fondo #cuadro3 {
+  justify-self: start;
+}
+html body #global #fondo #cuadro6 {
+  justify-self: start;
+}
+html body #global #fondo #cuadro9 {
+  justify-self: start;
+}
+@keyframes explosionCuadros {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  75% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+html body #global #fondo .X1 {
+  animation: rainbowX1 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowX1 {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  16.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  33.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  50% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  66.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  83.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+}
+html body #global #fondo .X2 {
+  animation: rainbowX2 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowX2 {
+  0% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  16.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  33.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  50% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  66.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  83.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  100% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+}
+html body #global #fondo .X3 {
+  animation: rainbowX3 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowX3 {
+  0% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  16.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  33.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  66.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  83.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  100% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+}
+html body #global #fondo .X4 {
+  animation: rainbowX4 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowX4 {
+  0% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  16.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  33.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  50% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  66.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  83.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  100% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+}
+html body #global #fondo .O1 {
+  animation: rainbowO1 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowO1 {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  16.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  33.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  50% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  66.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  83.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+}
+html body #global #fondo .O2 {
+  animation: rainbowO2 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowO2 {
+  0% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  16.6666666667% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  33.3333333333% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  50% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  66.6666666667% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  83.3333333333% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  100% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+}
+html body #global #fondo .O3 {
+  animation: rainbowO3 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowO3 {
+  0% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  16.6666666667% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  33.3333333333% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  50% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  66.6666666667% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  83.3333333333% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  100% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+}
+html body #global #fondo .O4 {
+  animation: rainbowO4 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowO4 {
+  0% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  16.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  33.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  66.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  83.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  100% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+}
+html body #global #fondo .O5 {
+  animation: rainbowO5 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowO5 {
+  0% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  16.6666666667% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  33.3333333333% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  50% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  66.6666666667% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  83.3333333333% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  100% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+}
+html body #global #fondo .O6 {
+  animation: rainbowO6 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowO6 {
+  0% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  16.6666666667% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  33.3333333333% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  50% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  66.6666666667% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  83.3333333333% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  100% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+}
+html body #global #fondo #cuadro1 #cuadro1circulo1 {
+  animation: circulosX1 2000ms, rainbowX1 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX1 {
+  0% {
+    transform: translate(-100px, -100px);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+@keyframes rainbowX1 {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  16.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  33.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  50% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  66.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  83.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+}
+html body #global #fondo #cuadro1 #cuadro1circulo2 {
+  animation: circulosX2 2000ms, rainbowX2 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX2 {
+  0% {
+    transform: translate(100px, -100px);
+  }
+  50% {
+    transform: translate(-100px, 100px);
+  }
+  100% {
+    transform: translate(100px, -100px);
+  }
+}
+@keyframes rainbowX2 {
+  0% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  16.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  33.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  50% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  66.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  83.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  100% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+}
+html body #global #fondo #cuadro1 #cuadro1circulo3 {
+  animation: circulosX3 2000ms, rainbowX3 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX3 {
+  0% {
+    transform: translate(-100px, 100px);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
+@keyframes rainbowX3 {
+  0% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  16.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  33.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  66.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  83.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  100% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+}
+html body #global #fondo #cuadro1 #cuadro1circulo4 {
+  animation: circulosX4 2000ms, rainbowX4 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX4 {
+  0% {
+    transform: translate(100px, 100px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes rainbowX4 {
+  0% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  16.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  33.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  50% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  66.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  83.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  100% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+}
+html body #global #fondo #cuadro3 #cuadro3circulo1 {
+  animation: circulosX1 2000ms, rainbowX1 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX1 {
+  0% {
+    transform: translate(-100px, -100px);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+@keyframes rainbowX1 {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  16.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  33.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  50% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  66.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  83.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+}
+html body #global #fondo #cuadro3 #cuadro3circulo2 {
+  animation: circulosX2 2000ms, rainbowX2 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX2 {
+  0% {
+    transform: translate(100px, -100px);
+  }
+  50% {
+    transform: translate(-100px, 100px);
+  }
+  100% {
+    transform: translate(100px, -100px);
+  }
+}
+@keyframes rainbowX2 {
+  0% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  16.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  33.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  50% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  66.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  83.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  100% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+}
+html body #global #fondo #cuadro3 #cuadro3circulo3 {
+  animation: circulosX3 2000ms, rainbowX3 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX3 {
+  0% {
+    transform: translate(-100px, 100px);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
+@keyframes rainbowX3 {
+  0% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  16.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  33.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  66.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  83.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  100% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+}
+html body #global #fondo #cuadro3 #cuadro3circulo4 {
+  animation: circulosX4 2000ms, rainbowX4 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX4 {
+  0% {
+    transform: translate(100px, 100px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes rainbowX4 {
+  0% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  16.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  33.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  50% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  66.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  83.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  100% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+}
+html body #global #fondo #cuadro5 #cuadro5circulo1 {
+  animation: circulosX1 2000ms, rainbowX1 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX1 {
+  0% {
+    transform: translate(-100px, -100px);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+@keyframes rainbowX1 {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  16.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  33.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  50% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  66.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  83.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+}
+html body #global #fondo #cuadro5 #cuadro5circulo2 {
+  animation: circulosX2 2000ms, rainbowX2 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX2 {
+  0% {
+    transform: translate(100px, -100px);
+  }
+  50% {
+    transform: translate(-100px, 100px);
+  }
+  100% {
+    transform: translate(100px, -100px);
+  }
+}
+@keyframes rainbowX2 {
+  0% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  16.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  33.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  50% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  66.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  83.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  100% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+}
+html body #global #fondo #cuadro5 #cuadro5circulo3 {
+  animation: circulosX3 2000ms, rainbowX3 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX3 {
+  0% {
+    transform: translate(-100px, 100px);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
+@keyframes rainbowX3 {
+  0% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  16.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  33.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  66.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  83.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  100% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+}
+html body #global #fondo #cuadro5 #cuadro5circulo4 {
+  animation: circulosX4 2000ms, rainbowX4 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX4 {
+  0% {
+    transform: translate(100px, 100px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes rainbowX4 {
+  0% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  16.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  33.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  50% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  66.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  83.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  100% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+}
+html body #global #fondo #cuadro7 #cuadro7circulo1 {
+  animation: circulosX1 2000ms, rainbowX1 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX1 {
+  0% {
+    transform: translate(-100px, -100px);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+@keyframes rainbowX1 {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  16.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  33.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  50% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  66.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  83.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+}
+html body #global #fondo #cuadro7 #cuadro7circulo2 {
+  animation: circulosX2 2000ms, rainbowX2 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX2 {
+  0% {
+    transform: translate(100px, -100px);
+  }
+  50% {
+    transform: translate(-100px, 100px);
+  }
+  100% {
+    transform: translate(100px, -100px);
+  }
+}
+@keyframes rainbowX2 {
+  0% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  16.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  33.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  50% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  66.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  83.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  100% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+}
+html body #global #fondo #cuadro7 #cuadro7circulo3 {
+  animation: circulosX3 2000ms, rainbowX3 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX3 {
+  0% {
+    transform: translate(-100px, 100px);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
+@keyframes rainbowX3 {
+  0% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  16.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  33.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  66.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  83.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  100% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+}
+html body #global #fondo #cuadro7 #cuadro7circulo4 {
+  animation: circulosX4 2000ms, rainbowX4 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX4 {
+  0% {
+    transform: translate(100px, 100px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes rainbowX4 {
+  0% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  16.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  33.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  50% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  66.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  83.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  100% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+}
+html body #global #fondo #cuadro9 #cuadro9circulo1 {
+  animation: circulosX1 2000ms, rainbowX1 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX1 {
+  0% {
+    transform: translate(-100px, -100px);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+@keyframes rainbowX1 {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  16.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  33.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  50% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  66.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  83.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+}
+html body #global #fondo #cuadro9 #cuadro9circulo2 {
+  animation: circulosX2 2000ms, rainbowX2 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX2 {
+  0% {
+    transform: translate(100px, -100px);
+  }
+  50% {
+    transform: translate(-100px, 100px);
+  }
+  100% {
+    transform: translate(100px, -100px);
+  }
+}
+@keyframes rainbowX2 {
+  0% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  16.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  33.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  50% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  66.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  83.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  100% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+}
+html body #global #fondo #cuadro9 #cuadro9circulo3 {
+  animation: circulosX3 2000ms, rainbowX3 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX3 {
+  0% {
+    transform: translate(-100px, 100px);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
+@keyframes rainbowX3 {
+  0% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+  16.6666666667% {
+    background-color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue, 0px 0px 10px blue;
+  }
+  33.3333333333% {
+    background-color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia, 0px 0px 10px fuchsia;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red;
+  }
+  66.6666666667% {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow, 0px 0px 10px yellow;
+  }
+  83.3333333333% {
+    background-color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime, 0px 0px 10px lime;
+  }
+  100% {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua, 0px 0px 10px aqua;
+  }
+}
+html body #global #fondo #cuadro9 #cuadro9circulo4 {
+  animation: circulosX4 2000ms, rainbowX4 2000ms linear;
+  animation-iteration-count: infinite;
+}
+@keyframes circulosX4 {
+  0% {
+    transform: translate(100px, 100px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes rainbowX4 {
+  0% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+  16.6666666667% {
+    background-color: #ff0080;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 10px #ff0080, 0px 0px 10px #ff0080;
+  }
+  33.3333333333% {
+    background-color: #ff8000;
+    box-shadow: 0px 0px 10px #ff8000, 0px 0px 10px #ff8000, 0px 0px 10px #ff8000;
+  }
+  50% {
+    background-color: #80ff00;
+    box-shadow: 0px 0px 10px #80ff00, 0px 0px 10px #80ff00, 0px 0px 10px #80ff00;
+  }
+  66.6666666667% {
+    background-color: #00ff80;
+    box-shadow: 0px 0px 10px #00ff80, 0px 0px 10px #00ff80, 0px 0px 10px #00ff80;
+  }
+  83.3333333333% {
+    background-color: #0080ff;
+    box-shadow: 0px 0px 10px #0080ff, 0px 0px 10px #0080ff, 0px 0px 10px #0080ff;
+  }
+  100% {
+    background-color: #8000ff;
+    box-shadow: 0px 0px 10px #8000ff, 0px 0px 10px #8000ff, 0px 0px 10px #8000ff;
+  }
+}
+html body #global #fondo #cuadro2 {
+  justify-content: flex-start;
+}
+html body #global #fondo #cuadro2 #cuadro2circulo1 {
+  transform-origin: left center;
+  animation: rotacionCirculosO1 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO1 {
+  0% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(420deg);
+  }
+}
+html body #global #fondo #cuadro2 #cuadro2circulo2 {
+  transform-origin: left center;
+  animation: rotacionCirculosO2 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO2 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+html body #global #fondo #cuadro2 #cuadro2circulo3 {
+  transform-origin: left center;
+  animation: rotacionCirculosO3 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO3 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+html body #global #fondo #cuadro2 #cuadro2circulo4 {
+  transform-origin: left center;
+  animation: rotacionCirculosO4 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO4 {
+  0% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(600deg);
+  }
+}
+html body #global #fondo #cuadro2 #cuadro2circulo5 {
+  transform-origin: left center;
+  animation: rotacionCirculosO5 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO5 {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(660deg);
+  }
+}
+html body #global #fondo #cuadro2 #cuadro2circulo6 {
+  transform-origin: left center;
+  animation: rotacionCirculosO6 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO6 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+html body #global #fondo #cuadro4 {
+  justify-content: flex-start;
+}
+html body #global #fondo #cuadro4 #cuadro4circulo1 {
+  transform-origin: left center;
+  animation: rotacionCirculosO1 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO1 {
+  0% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(420deg);
+  }
+}
+html body #global #fondo #cuadro4 #cuadro4circulo2 {
+  transform-origin: left center;
+  animation: rotacionCirculosO2 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO2 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+html body #global #fondo #cuadro4 #cuadro4circulo3 {
+  transform-origin: left center;
+  animation: rotacionCirculosO3 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO3 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+html body #global #fondo #cuadro4 #cuadro4circulo4 {
+  transform-origin: left center;
+  animation: rotacionCirculosO4 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO4 {
+  0% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(600deg);
+  }
+}
+html body #global #fondo #cuadro4 #cuadro4circulo5 {
+  transform-origin: left center;
+  animation: rotacionCirculosO5 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO5 {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(660deg);
+  }
+}
+html body #global #fondo #cuadro4 #cuadro4circulo6 {
+  transform-origin: left center;
+  animation: rotacionCirculosO6 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO6 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+html body #global #fondo #cuadro6 {
+  justify-content: flex-start;
+}
+html body #global #fondo #cuadro6 #cuadro6circulo1 {
+  transform-origin: left center;
+  animation: rotacionCirculosO1 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO1 {
+  0% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(420deg);
+  }
+}
+html body #global #fondo #cuadro6 #cuadro6circulo2 {
+  transform-origin: left center;
+  animation: rotacionCirculosO2 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO2 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+html body #global #fondo #cuadro6 #cuadro6circulo3 {
+  transform-origin: left center;
+  animation: rotacionCirculosO3 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO3 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+html body #global #fondo #cuadro6 #cuadro6circulo4 {
+  transform-origin: left center;
+  animation: rotacionCirculosO4 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO4 {
+  0% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(600deg);
+  }
+}
+html body #global #fondo #cuadro6 #cuadro6circulo5 {
+  transform-origin: left center;
+  animation: rotacionCirculosO5 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO5 {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(660deg);
+  }
+}
+html body #global #fondo #cuadro6 #cuadro6circulo6 {
+  transform-origin: left center;
+  animation: rotacionCirculosO6 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO6 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+html body #global #fondo #cuadro8 {
+  justify-content: flex-start;
+}
+html body #global #fondo #cuadro8 #cuadro8circulo1 {
+  transform-origin: left center;
+  animation: rotacionCirculosO1 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO1 {
+  0% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(420deg);
+  }
+}
+html body #global #fondo #cuadro8 #cuadro8circulo2 {
+  transform-origin: left center;
+  animation: rotacionCirculosO2 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO2 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+html body #global #fondo #cuadro8 #cuadro8circulo3 {
+  transform-origin: left center;
+  animation: rotacionCirculosO3 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO3 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+html body #global #fondo #cuadro8 #cuadro8circulo4 {
+  transform-origin: left center;
+  animation: rotacionCirculosO4 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO4 {
+  0% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(600deg);
+  }
+}
+html body #global #fondo #cuadro8 #cuadro8circulo5 {
+  transform-origin: left center;
+  animation: rotacionCirculosO5 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO5 {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(660deg);
+  }
+}
+html body #global #fondo #cuadro8 #cuadro8circulo6 {
+  transform-origin: left center;
+  animation: rotacionCirculosO6 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotacionCirculosO6 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+html body #global #juego {
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 25% 50% 25%;
+  margin: 0px auto;
+  border-radius: 50px;
+  animation: container-start 1500ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+@keyframes container-start {
+  0% {
+    transform: rotate(720deg) scale(0);
+    border: 1px solid #fff;
+  }
+  66.66% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: none;
+    border: 1px solid #fff;
+  }
+  75% {
+    border: none;
+  }
+  100% {
+    box-shadow: 0px 0px 20px #0ff, 0px 0px 20px #0ff inset;
+  }
+}
+html body #global #juego #titulo {
+  font-family: "Xirod";
+  font-size: 24px;
+  color: #00f;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+html body #global #juego #titulo #en {
+  text-align: end;
+  animation: en 200ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes en {
+  0% {
+    transform: translateX(-600px);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    text-shadow: 0px 0px 20px #0ff;
+  }
+}
+html body #global #juego #titulo #RX {
+  animation: rx 200ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes rx {
+  0% {
+    transform: translateX(600px);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    text-shadow: 0px 0px 20px #0ff;
+  }
+}
+html body #global #juego #inicio {
+  font-family: "Pusab";
+}
+html body #global #juego #inicio #comenzar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+html body #global #juego #inicio #comenzar p {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: linear-gradient(180deg, #00f 0%, #0ff 50%, #00f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html body #global #juego #inicio #partida {
+  width: 50%;
+  height: 100%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  color: #fff;
+}
+html body #global #juego #inicio #partida .claseBotones {
+  background-color: #000;
+  box-shadow: 0px 0px 10px #00f, 0px 0px 10px #00f inset;
+}
+html body #global #juego #inicio #partida .botonesPulsados {
+  box-shadow: 0px 0px 10px #0ff, 0px 0px 10px #0ff inset;
+}
+html body #global #juego #inicio #partida .claseBotones, html body #global #juego #inicio #partida .botonesPulsados {
+  width: 40px;
+  height: 40px;
+  display: none;
+  font-family: "Xirod";
+  border-radius: 100%;
+  margin: 0px auto;
+  text-align: center;
+  line-height: 40px;
+  color: #0ff;
+  text-shadow: 0px 0px 20px #0ff;
+  transition: box-shadow 300ms;
+  animation: flashFinal 1000ms;
+  cursor: pointer;
+}
+html body #global #juego #inicio #partida .claseBotones span, html body #global #juego #inicio #partida .botonesPulsados span {
+  display: block;
+  opacity: 0;
+  border-radius: 100%;
+  transition: all 300ms;
+}
+html body #global #juego #inicio #partida .claseBotones span:hover, html body #global #juego #inicio #partida .botonesPulsados span:hover {
+  opacity: 0.5;
+}
+html body #global #juego #inicio #partida .claseBotones:hover {
+  box-shadow: 0px 0px 10px #0ff, 0px 0px 10px #0ff inset;
+}
+html body #global #juego #tema {
+  display: flex;
+  align-items: center;
+  font-family: "Xirod";
+}
+html body #global #juego #tema #botonTema {
+  display: flex;
+  width: 80px;
+  height: 30px;
+  align-items: center;
+  margin: 0px auto;
+  border-radius: 15px;
+  color: #00f;
+  box-shadow: 0px 0px 10px #00f, 0px 0px 10px #00f inset;
+  cursor: pointer;
+}
+html body #global #juego #tema #botonTema p {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+html body #global #juego #tema #botonTema:hover {
+  animation: temaHover 5000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes temaHover {
+  16.6666666667% {
+    color: fuchsia;
+    box-shadow: 0px 0px 10px fuchsia, 0px 0px 10px fuchsia inset;
+  }
+  33.3333333333% {
+    color: red;
+    box-shadow: 0px 0px 10px red, 0px 0px 10px red inset;
+  }
+  50% {
+    color: yellow;
+    box-shadow: 0px 0px 10px yellow, 0px 0px 10px yellow inset;
+  }
+  66.6666666667% {
+    color: lime;
+    box-shadow: 0px 0px 10px lime, 0px 0px 10px lime inset;
+  }
+  83.3333333333% {
+    color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 10px aqua inset;
+  }
+  100% {
+    color: blue;
+    box-shadow: 0px 0px 10px blue, 0px 0px 10px blue inset;
+  }
+}
+html body #global .flash {
+  background: #fff;
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  overflow: hidden;
+  animation: apagarFlash 500ms;
+  animation-delay: 1000ms;
+  z-index: 2;
+}
+html body #global #flash-izquierdo {
+  right: 50%;
+}
+html body #global #flash-derecho {
+  left: 50%;
+}
+@keyframes apagarFlash {
+  0% {
+    box-shadow: 0px 0px 0px #fff;
+  }
+  1% {
+    box-shadow: 0px 0px 100px #fff;
+  }
+  100% {
+    box-shadow: 0px 0px 0px #fff;
+  }
+}
+html body #global #fin {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  align-items: center;
+  font-size: 50px;
+  font-family: "trs";
+  top: -10%;
+}
+html body #global #fin #finalPartida {
+  color: #f00;
+  position: absolute;
+  white-space: nowrap;
+  left: -100%;
+}
+html body #global #taparPantalla {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/*# sourceMappingURL=styles.css.map */

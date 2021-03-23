@@ -1,0 +1,268 @@
+// Tema por defecto
+
+#fondo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    animation: gridCuadros 1500ms;
+
+    @keyframes gridCuadros {
+        0% {
+            width: 0%;
+            height: 0%;
+        }
+
+        75% {
+            width: 0%;
+            height: 0%;
+        }
+
+        100% {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // Cuadros (9 contenedores de circulos animados)
+
+    .cuadros {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        animation: explosionCuadros 1500ms;
+        align-items: center;
+        justify-content: center;
+
+        .circulosX {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+
+        .circulosX, .circulosO {
+            border-radius: 100%;
+        }
+
+        // Los circulos O se compondran de un eje y el circulo
+
+        .contenedorCirculos {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+
+            .ejeRotacionO {
+                width: 100px;
+                height: 1px;
+                animation: reducirEje 1000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            @keyframes reducirEje {
+                0% {
+                    width: 100px;
+                }
+
+                50% {
+                    width: 0px;
+                }
+                
+                100% {
+                    width: 100px;
+                }
+            }
+
+            .circulosO {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    // Alineaciones cuadros
+
+    @for $i from 1 to 4 {
+        #cuadro#{$i} {
+            align-self: end;
+        }
+    }
+
+    @for $i from 4 to 7 {
+        #cuadro#{$i} {
+            align-self: center;
+        }
+    }
+
+    @for $i from 7 to 10 {
+        #cuadro#{$i} {
+            align-self: start;
+        }
+    }
+
+    @each $i in 1, 4, 7 {
+        #cuadro#{$i} {
+            justify-self: end;
+        }
+    }
+
+    @each $i in 2, 5, 8 {
+        #cuadro#{$i} {
+            justify-self: center;
+        }
+    }
+
+    @each $i in 3, 6, 9 {
+        #cuadro#{$i} {
+            justify-self: start;
+        }
+    }
+
+    @keyframes explosionCuadros {
+        0% {
+            width: 0%;
+            height: 0%;
+        }
+
+        75% {
+            width: 0%;
+            height: 0%;
+        }
+
+        100% {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // Colores circulos
+
+    @for $i from 1 to 5 {
+        $grados1: $i * 360 / 4 - 90;
+
+        .X#{$i} {
+            animation: rainbowX#{$i} 500ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rainbowX#{$i} {
+            @for $j from 0 to 7 {
+                $porciento: $j * 100 / 6;
+                $grados2: $j * 360 / 6;
+                $colorX: hsl($grados1 + $grados2, 100%, 50%);
+
+                #{$porciento + "%"} {
+                    background-color: $colorX;
+                    box-shadow: 0px 0px 10px $colorX, 0px 0px 10px $colorX, 0px 0px 10px $colorX;
+                }
+            }
+        }
+    }
+
+    @for $i from 1 to 7 {
+        $grados1: $i * 360 / 6 - 60;
+
+        .O#{$i} {
+            animation: rainbowO#{$i} 500ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rainbowO#{$i} {
+            @for $j from 0 to 7 {
+                $porciento: $j * 100 / 6;
+                $grados2: $j * 360 / 6;
+                $colorO: hsl($grados1 + $grados2, 100%, 50%);
+
+                #{$porciento + "%"} {
+                    background-color: $colorO;
+                    box-shadow: 0px 0px 10px $colorO, 0px 0px 10px $colorO, 0px 0px 10px $colorO;
+                }
+            }
+        }
+    }
+
+    // Cuadros con X
+
+    @each $i in 1, 3, 5, 7, 9 {
+        #cuadro#{$i} {
+            $posicionX: 100px;
+            $posicionY: 100px;
+
+            @for $j from 1 to 5 {
+                $grados1: $j * 360 / 4 - 90;
+
+                @if $j == 3 {
+                    $posicionY: -$posicionY;
+                }
+
+                #cuadro#{$i}circulo#{$j} {
+                    animation: circulosX#{$j} 2000ms, rainbowX#{$j} 2000ms linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes circulosX#{$j} {
+                    0% {
+                        transform: translate(-$posicionX, -$posicionY);
+                    }
+                    
+                    50% {
+                        transform: translate($posicionX, $posicionY);
+                    }
+
+                    100% {
+                        transform: translate(-$posicionX, -$posicionY);
+                    }
+                }
+
+                @keyframes rainbowX#{$j} {
+                    @for $k from 0 to 7 {
+                        $porciento: $k * 100 / 6;
+                        $grados2: $k * 360 / 6;
+                        $colorX: hsl($grados1 + $grados2, 100%, 50%);
+
+                        #{$porciento + "%"} {
+                            background-color: $colorX;
+                            box-shadow: 0px 0px 10px $colorX, 0px 0px 10px $colorX, 0px 0px 10px $colorX;
+                        }
+                    }
+                }
+
+                $posicionX: -$posicionX;
+            }
+        }
+    }
+
+    /* Cuadros con O */
+
+    @each $i in 2, 4, 6, 8 {
+        #cuadro#{$i} {
+            justify-content: flex-start;
+
+            @for $j from 1 to 7 {
+                $grados: ($j * 360) / 6;
+
+                #cuadro#{$i}circulo#{$j} {
+                    transform-origin: left center;
+                    animation: rotacionCirculosO#{$j} 1000ms;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+
+                @keyframes rotacionCirculosO#{$j} {
+                    0% {
+                        transform: rotate($grados + deg);
+                    }
+
+                    100% {
+                        transform: rotate(($grados + 360) + deg);
+                    }
+                }
+            }
+        }
+    }
+}

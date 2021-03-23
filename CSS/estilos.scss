@@ -1,0 +1,274 @@
+// Colores
+
+@import 'colores';
+
+// Fuentes
+
+@import 'fuentes';
+
+// Estilos generales
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+
+    body {
+        background-color: $negro;
+        overflow: hidden;
+        height: 100%;
+
+        #global {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // Temas
+
+            @import 'fondo';
+
+            #juego {
+                background-color: $alpha;
+                width: 500px;
+                height: 500px;
+                display: grid;
+                grid-template-rows: 25% 50% 25%;
+                margin: 0px auto;
+                border-radius: 50px;
+                animation: container-start 1500ms;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                z-index: 1;
+
+                @keyframes container-start {
+                    0% {
+                        transform: rotate(720deg) scale(0.0);
+                        border: 1px solid $blanco;
+                    }
+
+                    66.66% {
+                        transform: rotate(0deg) scale(1.0);
+                        box-shadow: none;
+                        border: 1px solid $blanco;
+                    }
+
+                    75% {
+                        border: none;
+                    }
+
+                    100% {
+                        box-shadow: 0px 0px 20px $cian, 0px 0px 20px $cian inset;
+                    }
+                }
+
+                // Titulo
+                
+                #titulo {
+                    font-family: $xirod;
+                    font-size: 24px;
+                    color: $azul;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                
+                    #en {
+                        text-align: end;
+                        animation: en 200ms;
+                        animation-timing-function: linear;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                    @keyframes en {
+                        0% {
+                            transform: translateX(-600px);
+                        }
+
+                        50% {
+                            transform: translateX(0%);
+                        }
+
+                        100% {
+                            text-shadow: 0px 0px 20px $cian;
+                        }
+                    }
+                    
+                    #RX {
+                        animation: rx 200ms;
+                        animation-timing-function: linear;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                    @keyframes rx {
+                        0% {
+                            transform: translateX(600px);
+                        }
+
+                        50% {
+                            transform: translateX(0%);
+                        }
+
+                        100% {
+                            text-shadow: 0px 0px 20px $cian;
+                        }
+                    }
+                }
+
+                // Pantalla principal
+
+                #inicio {
+                    font-family: $pusab;
+
+                    #comenzar {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                            background: linear-gradient(180deg, $azul 0%, $cian 50%, $azul 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+
+                    // Comienzo partida
+
+                    #partida {
+                        width: 50%;
+                        height: 100%;
+                        margin: 0px auto;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        align-items: center;
+                        color: $blanco;
+
+                        .claseBotones {
+                            background-color: $negro;
+                            box-shadow: 0px 0px 10px $azul, 0px 0px 10px $azul inset;
+                        }
+
+                        .botonesPulsados {
+                            box-shadow: 0px 0px 10px $cian, 0px 0px 10px $cian inset;
+                        }
+
+                        .claseBotones, .botonesPulsados {
+                            width: 40px;
+                            height: 40px;
+                            display: none;
+                            font-family: $xirod;
+                            border-radius: 100%;
+                            margin: 0px auto;
+                            text-align: center;
+                            line-height: 40px;
+                            color: $cian;
+                            text-shadow: 0px 0px 20px $cian;
+                            transition: box-shadow 300ms;
+                            animation: flashFinal 1000ms;
+                            cursor: pointer;
+
+                            span {
+                                display: block;
+                                opacity: 0;
+                                border-radius: 100%;
+                                transition: all 300ms;
+                            }
+
+                            span:hover {
+                                opacity: 0.5;
+                            }
+                        }
+
+                        .claseBotones:hover {
+                            box-shadow: 0px 0px 10px $cian, 0px 0px 10px $cian inset;
+                        }
+                    }
+                }
+
+                // Footer tema
+
+                #tema {
+                    display: flex;
+                    align-items: center;
+                    font-family: $xirod;
+
+                    #botonTema {
+                        display: flex;
+                        width: 80px;
+                        height: 30px;
+                        align-items: center;
+                        margin: 0px auto;
+                        border-radius: 15px;
+                        color: $azul;
+                        box-shadow: 0px 0px 10px $azul, 0px 0px 10px $azul inset;
+                        cursor: pointer;
+
+                        p {
+                            display: block;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+
+                    #botonTema:hover {
+                        animation: temaHover 5000ms;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes temaHover {
+                        @for $i from 1 to 7 {
+                            $porciento: $i * 100 / 6;
+                            $grados: ($i * 360 / 6) - 120;
+                            $colorTemaHover: hsl($grados, 100%, 50%);
+
+                            #{$porciento + "%"} {
+                                color: $colorTemaHover;
+                                box-shadow: 0px 0px 10px $colorTemaHover, 0px 0px 10px $colorTemaHover inset;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Efecto flash
+            
+            @import 'efectoFlash';
+
+            // Pantalla superior final
+
+            #fin {
+                display: flex;
+                height: 10%;
+                width: 100%;
+                background: $alpha;
+                position: absolute;
+                align-items: center;
+                font-size: 50px;
+                font-family: $trs;
+                top: -10%;
+
+                #finalPartida {
+                    color: $rojo;
+                    position: absolute;
+                    white-space: nowrap;
+                    left: -100%;
+                }
+            }
+
+            // Telon de transicion
+
+            #taparPantalla {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+        }
+    }
+}

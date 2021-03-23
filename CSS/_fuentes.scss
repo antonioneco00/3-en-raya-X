@@ -1,0 +1,22 @@
+// Variables
+
+$xirod: "Xirod";
+$pusab: "Pusab";
+$trs: "trs";
+
+// Importaciones
+
+@font-face {
+    font-family: $xirod;
+    src: url('font/xirod.ttf');
+}
+
+@font-face {
+    font-family: $pusab;
+    src: url('font/PUSAB___.TTF');
+}
+
+@font-face {
+    font-family: $trs;
+    src: url('font/TRS-Million.otf');
+}
