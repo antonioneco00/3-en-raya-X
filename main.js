@@ -267,5 +267,3 @@ var numeroBoton;
 function getId(id) {
     numeroBoton = id;
 }
-
-// Definitivo
