@@ -10,7 +10,6 @@ $(document).ready(function () {
     var titulo = $("#titulo");
     var comenzar = $("#comenzar");
     var comenzarBool;
-    // var tema = $("#tema");
     var partida = $("#partida");
     var contador = 0;
     var signoXO = "X";
@@ -41,7 +40,6 @@ $(document).ready(function () {
 
     function comienzo() {
         comenzar.hide();
-        // tema.hide();
         circulos.hide();
         titulo.hide().delay(1000).fadeIn(100, function () {
             circulos.show();
@@ -51,7 +49,6 @@ $(document).ready(function () {
                 telon.hide();
             });
             comenzar.fadeIn(500);
-            // tema.fadeIn(500);
             comenzarBool = true;
 
             /* Pulsar Enter para empezar */
@@ -63,7 +60,6 @@ $(document).ready(function () {
                         partida.fadeIn(500);
                         botones.fadeIn(500);
                     });
-                    // tema.fadeOut(250);
                     comenzarBool = false;
                     partidaXO = [
                         [1, 2, 3],
