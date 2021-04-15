@@ -243,7 +243,6 @@ $(document).ready(function () {
     function nuevaPartida() {
         telon.hide();
         comenzar.fadeIn(500);
-        // tema.fadeIn(500);
         comenzarBool = true;
         contador = 0;
         
